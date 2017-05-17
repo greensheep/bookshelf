@@ -21,7 +21,7 @@ export default class EagerRelation extends EagerBase {
     const relatedData = handled.relatedData;
 
     // skip eager loading for rows where the foreign key isn't set
-    if (relatedData.parentFk === null) return;
+    // if (relatedData.parentFk === null) return;
 
     if (relatedData.type === 'morphTo') {
       return this.morphToFetch(relationName, relatedData, options);

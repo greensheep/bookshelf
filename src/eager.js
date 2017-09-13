@@ -77,7 +77,7 @@ export default class EagerRelation extends EagerBase {
     return Promise.try(() => {
       // If there is a response, fetch additional nested eager relations, if any.
       if (response.length > 0 && options.withRelated) {
-        const relatedModel = relatedData.createModel();
+        const relatedModel = relatedData.createModel(response[0]);
 
         // If this is a `morphTo` relation, we need to do additional processing
         // to ensure we don't try to load any relations that don't look to exist.

@@ -12,8 +12,9 @@
     "test": "npm run lint &&  mocha --check-leaks -t 10000 -b test/index.js",
     "jsdoc": "./scripts/jsdoc.sh",
     "gh-pages": "./scripts/gh-pages.sh",
-    "prepublish": "npm run build",
-    "postpublish": "./scripts/postpublish.sh"
+    "prepublish": "yarn run build",
+    "postpublish": "./scripts/postpublish.sh",
+    "postinstall": "yarn run build"
   },
   "homepage": "http://bookshelfjs.org",
   "repository": {
